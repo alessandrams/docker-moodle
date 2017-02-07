@@ -13,7 +13,7 @@ services:
         image: jhardison/moodle
         links:
           - db
-	ports: 
+        ports: 
           - "8080:80"
-	environment:
+        environment:
           - MOODLE_URL=http://127.0.0.1:8080
