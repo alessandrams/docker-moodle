@@ -6,7 +6,7 @@ DB:
     - MYSQL_USER=moodle
     - MYSQL_PASSWORD=moodle
  moodle:
-   image: jhardison/moodle
+   image: aledemelo/docker-moodle:latest
    links:
      - DB
    ports: 
