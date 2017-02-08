@@ -5,11 +5,11 @@ DB:
     - MYSQL_ROOT_PASSWORD=moodle
     - MYSQL_USER=moodle
     - MYSQL_PASSWORD=moodle
- moodle:
+moodle:
    image: aledemelo/docker-moodle:latest
    links:
-     - DB
+    - DB
    ports: 
-     - "8080:80"
+    - "8080:80"
    environment:
-     - MOODLE_URL=http://127.0.0.1:8080
+    - MOODLE_URL=http://127.0.0.1:8080
