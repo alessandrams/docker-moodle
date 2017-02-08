@@ -1,6 +1,6 @@
 version: "2"
 services:
-    sqldb:
+    DB:
         image: mysql
         environment:
           - MYSQL_DATABASE=moodle
@@ -10,7 +10,7 @@ services:
     moodle:
         image: jhardison/moodle
         depends_on:
-          - sqldb
+          - DB
         ports: 
           - "8080:80"
         environment:
