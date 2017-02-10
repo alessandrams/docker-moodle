@@ -1,7 +1,7 @@
 # Dockerfile for moodle instance. more dockerish version of https://github.com/sergiogomez/docker-moodle
 # Forked from Jon Auer's docker version. https://github.com/jda/docker-moodle
 FROM ubuntu:16.04
-MAINTAINER Jonathan Hardison <ale.melo95@gmail.com>
+MAINTAINER Alessandra de Melo <ale.melo95@gmail.com>
 #Original Maintainer Jon Auer <jda@coldshore.com> ---> Jonathan Hardison <jmh@jonathanhardison.com>
 
 VOLUME ["/var/moodledata"]
@@ -41,9 +41,6 @@ RUN apt-get update && \
 
 # Enable SSL, moodle requires it
 RUN a2enmod ssl && a2ensite default-ssl # if using proxy, don't need actually secure connection
-
-# Cleanup
-#RUN apt-get clean autoclean && apt-get autoremove -y && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /var/lib/dpkg/* /var/lib/cache/* /var/lib/log/*
 
 CMD ["/etc/apache2/foreground.sh"]
 
